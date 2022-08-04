@@ -34,7 +34,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about-us, .services, .skills, .teams, .contact, footer{
+.about-us, .activities, .news-events, .management, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about-us .about-us-content,
@@ -70,7 +70,7 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    color: #810541;
     padding: 0 5px;
     background: #fff;
     transform: translateX(-50%);
@@ -87,7 +87,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: maroon;
+    background: #810541;
 }
 .navbar .max-width{
     display: flex;
@@ -105,7 +105,7 @@ section .title::after{
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: crimson;
+    color: #810541;
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
@@ -122,9 +122,10 @@ section .title::after{
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
+    color: black;
 }
 .navbar .menu li a:hover{
-    color: crimson;
+    color: #810541;
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -141,7 +142,7 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background: #810541;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -190,14 +191,21 @@ section .title::after{
 }
 
 .home .home-content .text-1{
-    font-size: 25px;
+    font-size: 25px;s
     font-weight: bold;
     color: white;
 }
 
+.home .home-content .text-2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 .home .home-content .card-1{
     width: calc(50% - 20px);
-    background-color: maroon;
+    position: relative;
+    background-color: #810541;
     text-align: left;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 6px;
@@ -206,24 +214,31 @@ section .title::after{
     transition: all 0.3s ease;
 }
 
+.home .home-content .card-1::after{
+    content: "";
+    display: block;
+}
+
 .home .home-content .card-1:hover{
     background: white;
     color: #111;
 }
 
 /* about-us section styling */
-.about-us, .teams{
+.about-us, .management{
     color:#fff;
     background: #111;
 }
 .about-us .title::before,
-.teams .title::before{
+.management .title::before,
+.contact .title::before
+{
     background: #fff;
 }
 
 .about-us .about-us-content .card{
     width: calc(33% - 20px);
-    background: maroon;
+    background: #810541;
     text-align: left;
     border-radius: 6px;
     padding: 50px 25px;
@@ -234,7 +249,7 @@ section .title::after{
 
 .about-us .about-us-content .card-2{
     width: calc(50% - 20px);
-    background: maroon;
+    background: #810541;
     text-align: left;
     border-radius: 6px;
     padding: 50px 25px;
@@ -246,7 +261,7 @@ section .title::after{
 
 .about-us .about-us-content .card-3{
     width: calc(15% - 20px);
-    background: maroon;
+    background: #810541;
     text-align: left;
     border-radius: 50%;
     padding: 50px 25px;
@@ -279,7 +294,7 @@ section .title::after{
 }
 .about-us .about-us-content .card i{
     font-size: 50px;
-    color: crimson;
+    color: #810541;
     transition: color 0.3s ease;
 }
 .about-us .about-us-content .card:hover i{
@@ -303,166 +318,52 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
-/* services section styling */
-.services, .teams{
-    color:#fff;
-    background: #111;
+/* management section styling */
+.management{
+    background-color: white;
+    color: black;
 }
-.services .title::before,
-.teams .title::before{
-    background: #fff;
+.management .title::before
+{
+    background: black;
 }
-.services .title::after,
-.teams .title::after{
-    background: #111;
-    content: "what i provide";
-}
-.services .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover{
-    background: crimson;
-}
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-
-/* skills section styling */
-
-.skills .title::after{
-    content: "what i know";
-}
-.skills .skills-content .column{
-    width: calc(50% - 30px);
-}
-.skills .skills-content .left .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.skills .skills-content .left p{
-    text-align: justify;
-}
-.skills .skills-content .left a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.skills .skills-content .left a:hover{
-    color: crimson;
-    background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: crimson;
-}
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .js::before{
-    width: 80%;
-}
-.skills-content .right .php::before{
-    width: 50%;
-}
-.skills-content .right .mysql::before{
-    width: 70%;
-}
-
-/* teams section styling */
-.teams .title::after{
-    content: "who with me";
-}
-.teams .carousel .card{
-    background: #222;
+.management .carousel .card{
+    background: #810541;
+    color: white;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
-    background: crimson;
+.management .carousel .card:hover{
+    background: white;
+    color: #111;
 }
-.teams .carousel .card .box{
+.management .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.management .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.management .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
+.management .carousel .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid crimson;
+    border: 5px solid #810541;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
+.management .carousel .card:hover img{
     border-color: #fff;
 }
 .owl-dots{
@@ -475,7 +376,7 @@ section .title::after{
     margin: 0 5px;
     outline: none!important;
     border-radius: 50%;
-    border: 2px solid crimson!important;
+    border: 2px solid #810541!important;
     transition: all 0.3s ease;
 }
 .owl-dot.active{
@@ -484,13 +385,32 @@ section .title::after{
 }
 .owl-dot.active,
 .owl-dot:hover{
-    background: crimson!important;
+    background: #810541!important;
+}
+
+
+/* News and Events section styling */
+.news-events{
+    background-color: black;
+    color: white;
+}
+.news-events .title{
+    color: white;
+}
+.news-events .title::before
+{
+    background: white;
 }
 
 /* contact section styling */
-.contact .title::after{
-    content: "get in touch";
+.contact{
+    background-color: black;
+    color: white;
 }
+.contact .title{
+    color: white;
+}
+
 .contact .contact-content .column{
     width: calc(50% - 30px);
 }
@@ -509,13 +429,15 @@ section .title::after{
     display: flex;
     height: 65px;
     align-items: center;
+    margin-top: 10px;
 }
 .contact .contact-content .row .info{
     margin-left: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: crimson;
+    color: #810541;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
@@ -523,74 +445,23 @@ section .title::after{
 .contact .contact-content .info .sub-title{
     color: #333;
 }
-.contact .right form .fields{
-    display: flex;
+
+.contact .contact-content .map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
 }
-.contact .right form .field,
-.contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-.contact .right form .textarea{
-    height: 80px;
-    width: 100%;
-}
-.contact .right form .name{
-    margin-right: 10px;
-}
-.contact .right form .field input,
-.contact .right form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
-}
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus{
-    border-color: #b3b3b3;
-}
-.contact .right form .textarea textarea{
-  padding-top: 10px;
-  resize: none;
-}
-.contact .right form .button-area{
-  display: flex;
-  align-items: center;
-}
-.right form .button-area button{
-  color: #fff;
-  display: block;
-  width: 160px!important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
-}
-.right form .button-area button:hover{
-  color: crimson;
-  background: none;
-}
+
 /* footer section styling */
 footer{
-    background: #111;
+    background: white;
     padding: 15px 23px;
-    color: #fff;
+    color: black;
     text-align: center;
 }
 footer span a{
-    color: crimson;
+    color: #810541;
     text-decoration: none;
 }
 footer span a:hover{
